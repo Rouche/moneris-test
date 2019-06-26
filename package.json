@@ -1,0 +1,41 @@
+{
+  "name": "sepaq-static-ui",
+  "version": "1.0.0",
+  "description": "Test moneris",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^1.1.12",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.9",
+    "mini-css-extract-plugin": "^0.4.5",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.1.0",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.5.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.7.0",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "scripts": {
+    "dev": "webpack --env.cdn=https://cdn.sepaq.com/moneris-test/dev/ --config webpack.config.js --mode development --verbose",
+    "test": "webpack --env.cdn=https://cdn.sepaq.com/moneris-test/test/ --config webpack.config.js --mode development",
+    "acpt": "webpack --env.cdn=https://cdn.sepaq.com/moneris-test/acpt/ --config webpack.config.js --mode production",
+    "uat": "webpack --env.cdn=https://cdn.sepaq.com/moneris-test/uat/ --config webpack.config.js --mode production",
+    "prod": "webpack --env.cdn=https://cdn.sepaq.com/moneris-test/prod/ --config webpack.config.js --mode production",
+    "start": "webpack-dev-server --env.cdn=http://localhost:9099/ --env.WEBPACK_DEV_SERVER=true --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devsepaq/moneris-test/"
+  },
+  "author": "Jean-Francois Larouche",
+  "license": ""
+}

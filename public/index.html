@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <title>Express</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="/moneris-lib.js"></script>
+
+        <script>
+            var $monerisLib = Moneris['moneris-lib'].Library.getInstance();
+            $monerisLib.dateUtils.init($monerisLib.moment('2018-01-01'));
+            console.log($monerisLib.dateUtils.getCurrentDate().toString());
+        </script>
+    </head>
+
+    <body>
+        <div>This is the outer page</div>
+        <div id=monerisResponse></div>
+        <!-- Changer profile id par le votre -->
+        <iframe id=monerisFrame src="https://esqa.moneris.com/HPPtoken/index.php?id=[profile id]&css_body=background:green;&css_textbox=border-width:2px;&css_textbox_pan=width:140px;&enable_exp=1&css_textbox_exp=width:40px;&enable_cvd=1&css_textbox_cvd=width:40px" frameborder='0' width="300px" height="400px"></iframe>
+
+        <input type=button onClick="$monerisLib.moneris.doMonerisSubmit()" value="submit iframe">
+
+        <script>
+        </script>
+    </body>
+
+</html>
